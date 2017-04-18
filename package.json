@@ -1,0 +1,39 @@
+{
+  "name": "koa-stream-render",
+  "version": "0.0.1",
+  "description": "middleware for koa2",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "rm -rf ./dist && tsc -p tsconfig.json",
+    "build-test": "rm -rf ./dist-test && tsc -p tsconfig.test.json",
+    "mocha": "mocha dist-test/*.js --require source-map-support/register",
+    "test": "npm run build && npm run build-test && npm run mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devlee/koa-stream-render.git"
+  },
+  "keywords": [
+    "koa2",
+    "stream-render"
+  ],
+  "author": "devlee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/devlee/koa-stream-render/issues"
+  },
+  "homepage": "https://github.com/devlee/koa-stream-render#readme",
+  "dependencies": {
+    "@types/koa": "^2.0.39",
+    "@types/mocha": "^2.2.41",
+    "@types/supertest": "^2.0.0",
+    "koa": "next",
+    "source-map-support": "^0.4.14"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "supertest": "^3.0.0"
+  }
+}
