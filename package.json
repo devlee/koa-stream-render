@@ -31,7 +31,8 @@
     "@types/mocha": "^2.2.41",
     "@types/supertest": "^2.0.0",
     "koa": "next",
-    "source-map-support": "^0.4.14"
+    "source-map-support": "^0.4.14",
+    "typescript": "^2.2.2"
   },
   "devDependencies": {
     "chai": "^3.5.0",
