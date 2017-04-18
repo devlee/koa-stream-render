@@ -5,7 +5,8 @@
     "target": "ES6",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "moduleResolution": "node"
   },
   "compileOnSave": false,
   "include": [
