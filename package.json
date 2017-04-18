@@ -8,7 +8,9 @@
     "build": "rm -rf ./dist && tsc -p tsconfig.json",
     "build-test": "rm -rf ./dist-test && tsc -p tsconfig.test.json",
     "mocha": "mocha dist-test/*.js --require source-map-support/register",
-    "test": "npm run build && npm run build-test && npm run mocha"
+    "test": "npm run build && npm run build-test && npm run mocha",
+    "istanbul": "istanbul cover _mocha dist-test/*.js && codecov",
+    "coverage": "npm run test && npm run istanbul"
   },
   "repository": {
     "type": "git",
@@ -33,6 +35,8 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "codecov": "^2.1.0",
+    "istanbul": "^0.4.5",
     "mocha": "^3.2.0",
     "supertest": "^3.0.0"
   }

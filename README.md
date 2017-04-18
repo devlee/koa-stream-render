@@ -1,5 +1,4 @@
-[![Travis CI Status](https://api.travis-ci.org/devlee/koa-stream-render.svg?branch=master)](https://travis-ci.org/devlee/koa-stream-render)
-
+[![Travis CI Status](https://api.travis-ci.org/devlee/koa-stream-render.svg?branch=master)](https://travis-ci.org/devlee/koa-stream-render) [![codecov.io](https://codecov.io/github/devlee/koa-stream-render/coverage.svg?branch=master)](https://codecov.io/github/devlee/koa-stream-render?branch=master)
 ## Installation
 
 ```
