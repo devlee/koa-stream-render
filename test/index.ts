@@ -2,7 +2,7 @@ import * as Koa from 'koa';
 import * as Chai from 'chai';
 import * as request from 'supertest';
 
-import { StreamRender, RenderContext } from '../dist';
+import { StreamRender, RenderContext } from '../dist/index';
 
 const app = new Koa();
 app.use(StreamRender());
