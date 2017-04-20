@@ -14,7 +14,7 @@ function getStreamRender(ctx, options) {
         ctx.body = readStream.pipe(pass);
     }).bind(pass);
 }
-exports.default = (options) => {
+exports.StreamRender = (options) => {
     return (ctx, next) => {
         if (!ctx.render) {
             ctx.render = getStreamRender(ctx, Object.assign({}, defaultOptions, options || {}));

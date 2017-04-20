@@ -1,6 +1,5 @@
 import * as stream from 'stream';
 import * as Koa from 'koa';
-import RenderContext from './interface';
 
 const defaultOptions = {
   ctxType: 'html',
@@ -17,7 +16,11 @@ function getStreamRender(ctx: Koa.Context, options: any): () => void {
   }).bind(pass);
 }
 
-export default (options?: any) => {
+export interface RenderContext extends Koa.Context {
+  render: (str: string) => void
+}
+
+export const StreamRender = (options?: any) => {
   return (ctx: RenderContext, next: () => Promise<any>): void => {
     if (!ctx.render) {
       ctx.render = getStreamRender(ctx, Object.assign({}, defaultOptions, options || {}));

@@ -2,12 +2,11 @@ import * as Koa from 'koa';
 import * as Chai from 'chai';
 import * as request from 'supertest';
 
-import KoaStreamRender from '../dist';
-import RenderContex from '../dist/interface';
+import { StreamRender, RenderContext } from '../dist';
 
 const app = new Koa();
-app.use(KoaStreamRender());
-app.use((ctx: RenderContex) => { ctx.render('test'); })
+app.use(StreamRender());
+app.use((ctx: RenderContext) => { ctx.render('test'); })
 
 let server;
 describe('render test', () => {
