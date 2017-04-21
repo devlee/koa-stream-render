@@ -16,14 +16,14 @@ function getStreamRender(ctx: Koa.Context, options: any): () => void {
   }).bind(pass);
 }
 
-export interface RenderContext extends Koa.Context {
-  render: (str: string) => void
+export interface StreamRenderContext extends Koa.Context {
+  streamRender: (str: string) => void
 }
 
 export const StreamRender = (options?: any) => {
-  return (ctx: RenderContext, next: () => Promise<any>): void => {
-    if (!ctx.render) {
-      ctx.render = getStreamRender(ctx, Object.assign({}, defaultOptions, options || {}));
+  return (ctx: StreamRenderContext, next: () => Promise<any>): void => {
+    if (!ctx.streamRender) {
+      ctx.streamRender = getStreamRender(ctx, Object.assign({}, defaultOptions, options || {}));
     }
 
     next();

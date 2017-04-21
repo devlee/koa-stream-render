@@ -16,8 +16,8 @@ function getStreamRender(ctx, options) {
 }
 exports.StreamRender = (options) => {
     return (ctx, next) => {
-        if (!ctx.render) {
-            ctx.render = getStreamRender(ctx, Object.assign({}, defaultOptions, options || {}));
+        if (!ctx.streamRender) {
+            ctx.streamRender = getStreamRender(ctx, Object.assign({}, defaultOptions, options || {}));
         }
         next();
     };

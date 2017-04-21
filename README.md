@@ -10,11 +10,17 @@ $ npm install koa@next @types/koa koa-stream-render --save
 
 This is a middleware for kao2 stream-render.
 
+## Broken Update
+
+Use 'ctx.streamRender'(v0.2.0) instead of 'ctx.render'(v0.1.0)
+
+Use 'StreamRenderContext'(v0.2.0) instead of 'RenderContext'(v0.1.0)
+
 ## Example
 
 ```typescript
 import * as Koa from 'koa';
-import { StreamRender, RenderContext } from 'koa-stream-render';
+import { StreamRender, StreamRenderContext } from 'koa-stream-render';
 
 const app = new Koa();
 
@@ -23,7 +29,7 @@ app.use(StreamRender({
 }));
 
 app.use((ctx: RenderContext, next: () => Promise<any>) => {
-  ctx.render('hello world');
+  ctx.streamRender('hello world');
   next();
 });
 
