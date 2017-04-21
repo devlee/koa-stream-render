@@ -28,7 +28,7 @@ app.use(StreamRender({
   ctxType: 'html', // default
 }));
 
-app.use((ctx: RenderContext, next: () => Promise<any>) => {
+app.use((ctx: StreamRenderContext, next: () => Promise<any>) => {
   ctx.streamRender('hello world');
   next();
 });
